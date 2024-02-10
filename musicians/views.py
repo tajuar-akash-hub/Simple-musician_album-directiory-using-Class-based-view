@@ -14,7 +14,6 @@ class add_musician_view(CreateView):
     template_name = 'add_musician.html'
     success_url =  reverse_lazy("add_musician")
     def form_valid(self, form):
-        form.save()
         return super().form_valid(form)
     
 
@@ -29,6 +28,7 @@ class edit_musician_view(UpdateView):
 
 class delete_musician_view(DeleteView):
     model = musician_Model
+    template_name="home.html"
     pk_url_kwarg='id'
     success_url = reverse_lazy("homepage")
     

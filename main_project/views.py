@@ -1,7 +1,8 @@
 from django.shortcuts import render
 from musicians.models import musician_Model
 from albums.models import albums_Model
-
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
+from django.urls import reverse_lazy
 
 def home(request):
     musican_data = musician_Model.objects.all()
