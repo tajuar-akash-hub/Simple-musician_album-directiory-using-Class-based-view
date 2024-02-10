@@ -6,7 +6,7 @@ from musicians.models import musician_Model
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.urls import reverse_lazy
 
-
+#thsi is second code 
 
 class add_musician_view(CreateView):
     model = musician_Model
